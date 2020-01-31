@@ -17,10 +17,11 @@ double triangleArea(vertex a, vertex b, vertex c)
 	return 0.5*fabs(det(xAB, yAB, xAC, yAC));
 }
 
-vertex polygonArea(int n, vertex vertices[n])
+double polygonArea(int n, vertex vertices[])
 {
 	double suma = 0;
 	for (int i = 1; i <= n - 2; i++) {
-		suma += triangleArea(vertices[0].x, vertices[0].y, vertices[i].x, vertices[i].y, vertices[i + 1].x, vertices[i + 1].y);
+		suma += triangleArea(vertices[0], vertices[i], vertices[i + 1]);
 	}
+	return suma;
 }

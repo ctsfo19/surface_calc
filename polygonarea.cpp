@@ -4,12 +4,6 @@
 
 using namespace std;
 
-/*declaring vertex as a struct
-struct vertex{
-	double x;
-	double y;
-};*/
-
 int main()
 {
 	//declaring main variables
@@ -32,6 +26,7 @@ int main()
 		for (int i = 0; i < n; i++){
 			cin >> vertices[i].x >> vertices[i].y;
 		}
+		cout << "The area of given polygon equals:" << endl;
 		cout << polygonArea(n, vertices) << endl;
 	}
 	else{
@@ -45,16 +40,5 @@ int main()
 		cout << triangleArea(a,b,c) << endl;
 	
 	}
-	/*
-	//number of polygon's vertices
-	vertex vertices[n];
-	//read n polygon vertices from user input
-	for (int i = 0; i < n; i++)
-		cin >> vertices[i].x >> vertices[n].y;
-	cout << polygonArea(vertices, 6) << endl;
-	*/
-
-	
-
 	return 0;
 }
