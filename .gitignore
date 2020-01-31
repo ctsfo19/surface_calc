@@ -30,4 +30,7 @@
 *.out
 *.app
 *.com
+# binary
 poly_app1
+poly_app2
+poly_app3
