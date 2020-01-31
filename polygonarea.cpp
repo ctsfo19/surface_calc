@@ -28,6 +28,11 @@ int main()
 		
 		cout << "Input coordinates of vertices, each coordinate of one vertex separated from the other by a single space and each vertex separated by an enter" << endl;
 
+		vertex vertices[n];
+		for (int i = 0; i < n; i++){
+			cin >> vertices[i].x >> vertices[i].y;
+		}
+		cout << polygonArea(n, vertices) << endl;
 	}
 	else{
 		cout << "Input coordinates of vertices, each coordinate of one vertex separated from the other by a single space and each vertex separated by an enter" << endl;
@@ -36,6 +41,7 @@ int main()
 		cin >> b.x >> b.y;
 		cin >> c.x >> c.y;
 
+		cout << "The area of given triangle equals:" << endl;
 		cout << triangleArea(a,b,c) << endl;
 	
 	}
