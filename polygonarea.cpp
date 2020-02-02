@@ -40,5 +40,6 @@ int main()
 		cout << triangleArea(a,b,c) << endl;
 	
 	}
+	system("pause");
 	return 0;
 }
