@@ -1,8 +1,35 @@
 #include <iostream>
 #include <cmath>
-#include "polygonarea.lib"
 
 using namespace std;
+
+struct vertex{
+    double x;
+    double y;
+};
+
+int det(int a, int b, int c, int d) {
+	return a * d - b * c;
+}
+
+double triangleArea(vertex a, vertex b, vertex c)
+{
+	double xAB = b.x - a.x;
+	double yAB = b.y - a.y;
+	double xAC = c.x - a.x;
+	double yAC = c.y - a.y;
+
+	return 0.5*fabs(det(xAB, yAB, xAC, yAC));
+}
+
+double polygonArea(int n, vertex vertices[])
+{
+	double suma = 0;
+	for (int i = 1; i <= n - 2; i++) {
+		suma += triangleArea(vertices[0], vertices[i], vertices[i + 1]);
+	}
+	return suma;
+}
 
 int main()
 {
